@@ -59,8 +59,8 @@ export default function GitMap() {
     return (
         <>
             <Head>
-                <title>GitMap</title>
-                <meta name="description" content="gitmap" />
+                <title>GitHub Pattern Generator</title>
+                <meta name="description" content="github pattern generator" />
             </Head>
             {clicked ? (
             <>
