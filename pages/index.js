@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import { Grid } from 'semantic-ui-react';
+import Calendar from 'react-calendar';
 
 const LOCAL_STORAGE_KEY = 'State';
 
@@ -14,6 +15,7 @@ const monthName = months[month];
 
 export default function GitMap() {
     const [clicked, setClicked] = useState(false);
+    const [value,  onChange] = useState(new Date());
     console.log(`${monthName} ${day}, ${year}`);
     const dateFormat = `${monthName} ${day}, ${year}`;
 
@@ -86,6 +88,9 @@ export default function GitMap() {
                     </ul>
                 </tr>
             </table> */}
+            <div>
+              <Calendar onChange={onChange} value={value} />
+            </div>
         </>
     );
 }
